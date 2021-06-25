@@ -489,6 +489,11 @@ img {
   margin-bottom: 86px;
 }
 
+.visits__caption {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .visits__title {
   margin-bottom: 54px;
 }
@@ -855,13 +860,16 @@ img {
     height: 230px;
   }
 
+  .tours {
+    margin-bottom: 76px;
+  }
+
   .tours__tour {
-    /* grid-template-columns: none; */
     margin-bottom: 50px;
   }
 
   .tour__pic,
-  .tours__info {
+  .tour__info {
     grid-column: span 2;
   }
 
@@ -879,6 +887,10 @@ img {
 
   .visits {
     overflow: hidden;
+  }
+
+  .visit__card {
+    grid-column: span 6;
   }
 }
 
