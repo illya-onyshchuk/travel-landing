@@ -13,6 +13,7 @@
 (function () {
   const burgerItem = document.querySelector('.burger');
   const menu = document.querySelector('.nav');
+  const menuLinks = document.querySelectorAll('.nav__link');
   const menuClose = document.querySelector('.nav__close');
    burgerItem.addEventListener('click', ()=> {
      menu.classList.add('nav_active');
@@ -20,6 +21,14 @@
    menuClose.addEventListener('click', ()=>  {
      menu.classList.remove('nav_active');
    });
+   if (window.innerWidth <= 767) {
+     for (let i = 0; i < menuLinks.length; i += 1) {
+       menuLinks[i].addEventListener('click', ()=> {
+        menu.classList.remove('nav_active');
+       });
+     } 
+   }
+
 }());
 
 // Scroll to anchors
