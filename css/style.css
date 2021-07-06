@@ -125,26 +125,28 @@ img {
   text-decoration: none;
 }
 
-.nav__link:hover,
-.nav__link:focus,
-.nav__link:active {
-  opacity: 0.75;
-  transition: 0.3s linear;
+.nav__link:hover {
+  opacity: 0.5;
+
+  transition: opacity 0.2s linear;
 }
-.nav__link:hover::after {
+
+.nav__link::after {
   content: "";
   display: block;
   height: 1px;
-  width: 100%;
+  width: 0;
 
   background-color: #fff;
-  opacity: 0.75;
-
   position: absolute;
   top: 100%;
-  right: 1;
+  left: 0;
+}
 
-  transition: opacity 0.2s linear;
+.nav__link:hover::after {
+  width: 100%;
+
+  transition: width 0.3s linear;
 }
 
 .header__burger {
